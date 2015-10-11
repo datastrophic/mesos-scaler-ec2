@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/mesos-scaler-ec2.iml" filepath="$PROJECT_DIR$/.idea/mesos-scaler-ec2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scaler-service/.idea/modules/scaler-service.iml" filepath="$PROJECT_DIR$/scaler-service/.idea/modules/scaler-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scaler-service/.idea/modules/scaler-service-build.iml" filepath="$PROJECT_DIR$/scaler-service/.idea/modules/scaler-service-build.iml" />
     </modules>
   </component>
 </project>
