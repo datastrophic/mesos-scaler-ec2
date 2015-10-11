@@ -1,0 +1,59 @@
+{
+  "frontends": [
+    {
+      "name": "fibonacci-service-frontend",
+      "mode": "http",
+      "bindPort": 8001,
+      "bindIp": "0.0.0.0",
+      "unixSock": "",
+      "sockProtocol": "",
+      "options": {
+        "abortOnClose": false,
+        "allBackups": false,
+        "checkCache": false,
+        "forwardFor": false,
+        "httpClose": false,
+        "httpCheck": false,
+        "sslHelloCheck": false,
+        "tcpKeepAlive": false,
+        "tcpLog": false,
+        "tcpSmartAccept": false,
+        "tcpSmartConnect": false
+      },
+      "defaultBackend": "fibonacci-service-backend",
+      "httpQuota": {},
+      "tcpQuota": {}
+    }
+  ],
+  "backends": [
+    {
+      "name": "fibonacci-service-backend",
+      "mode": "http",
+      "servers": [
+        {
+          "name": "t001",
+          "host": "192.168.59.103",
+          "port": 8081,
+          "unixSock": "",
+          "weight": 100,
+          "maxconn": 1000,
+          "check": false,
+          "checkInterval": 10
+        },
+        {
+          "name": "t002",
+          "host": "192.168.59.103",
+          "port": 8082,
+          "unixSock": "",
+          "weight": 100,
+          "maxconn": 1000,
+          "check": false,
+          "checkInterval": 10
+        }
+      ],
+
+      "proxyMode": false
+    }
+  ],
+  "routes": []
+}

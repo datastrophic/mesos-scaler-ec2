@@ -1,0 +1,40 @@
+{
+  "routes": [],
+  "frontends": [
+    {
+      "name": "fibonacci-service-frontend",
+      "bindPort": "8001",
+      "bindIp": "0.0.0.0",
+      "defaultBackend": "fibonacci-service-backend",
+      "mode": "http"
+    }
+  ],
+  "backends": [
+    {
+      "name": "fibonacci-service-backend",
+      "mode": "http",
+      "servers": [
+        {
+          "name": "t001",
+          "host": "192.168.59.103",
+          "port": "8081",
+          "check": false,
+          "checkInterval": "10"
+        },
+        {
+          "name": "t002",
+          "host": "192.168.59.103",
+          "port": "8082",
+          "check": false,
+          "checkInterval": "10"
+        },
+        {
+          "name": "name_null",
+          "check": true,
+          "checkInterval": "10"
+        }
+      ],
+      "proxyMode": false
+    }
+  ]
+}
